@@ -42,10 +42,9 @@ class CustomCollectionViewController: UICollectionViewController, UICollectionVi
 }
 
 
-//extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout {
-//  
-//  override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
-//    let size = CGSize(width: view.frame.width, height: 44.0)
-//    return size
-//  }
-//}
+extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    let size = CGSize(width: view.frame.width, height: 44.0)
+    return size
+  }
+}
