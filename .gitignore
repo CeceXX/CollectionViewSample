@@ -1,6 +1,4 @@
-
-CollectionViewSample.xcodeproj/project.xcworkspace/xcuserdata/markfour.xcuserdatad/UserInterfaceState.xcuserstate
-
-*.xcbkptlist
-
-*.xcuserstate
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+.DS_Store
