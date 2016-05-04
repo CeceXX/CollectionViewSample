@@ -20,7 +20,6 @@ class CustomCollectionViewController: UICollectionViewController {
   
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-    cell.backgroundColor = .redColor()
     return cell
   }
 }
