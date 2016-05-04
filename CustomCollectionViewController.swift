@@ -8,7 +8,14 @@
 
 import UIKit
 
-class CustomCollectionViewController: UICollectionViewController {
+class CustomCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout{
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    collectionView?.delegate = self
+    collectionView?.collectionViewLayout
+  }
+  
   
   override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
     return 4
@@ -22,4 +29,23 @@ class CustomCollectionViewController: UICollectionViewController {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
     return cell
   }
+  
+  override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+    let size = CGSize(width: view.frame.width, height: 44.0)
+    return size
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    let size = CGSize(width: view.frame.width, height: 44.0)
+    return size
+  }
 }
+
+
+//extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout {
+//  
+//  override func sizeForChildContentContainer(container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+//    let size = CGSize(width: view.frame.width, height: 44.0)
+//    return size
+//  }
+//}
