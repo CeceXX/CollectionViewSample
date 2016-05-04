@@ -10,4 +10,17 @@ import UIKit
 
 class CustomCollectionViewController: UICollectionViewController {
   
+  override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    return 4
+  }
+  
+  override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 10
+  }
+  
+  override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+    cell.backgroundColor = .redColor()
+    return cell
+  }
 }
