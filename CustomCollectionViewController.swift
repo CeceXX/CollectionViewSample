@@ -18,7 +18,7 @@ class CustomCollectionViewController: UICollectionViewController {
   
   
   override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-    return 4
+    return 1
   }
   
   override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,7 +33,7 @@ class CustomCollectionViewController: UICollectionViewController {
 
 extension CustomCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    let size = CGSize(width: view.frame.width, height: 44.0)
+    let size = CGSize(width: view.frame.width, height: 100.0)
     return size
   }
 }
